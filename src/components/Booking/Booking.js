@@ -8,8 +8,8 @@ import bookingLogo from '../../images/logo/logo.png';
 import "./Booking.css";
 
 const Booking = () => {
-  const [details, setDetails] = useState({})
   const { user } = useAuth();
+  const [details, setDetails] = useState({})
   const { register, handleSubmit } = useForm();
   const {id} = useParams();
   
@@ -54,9 +54,9 @@ const Booking = () => {
           />
           <input type="number" {...register("date")} placeholder="Date" />
           
-          <input defaultValue={details.name} {...register("guide name")} placeholder="Guide Name"/>
-          <input defaultValue={details.location} {...register("location")} placeholder="Location"/>
-          <input defaultValue={details.languages} {...register("languages")} placeholder="Languages"/>
+          <input defaultValue={details?.name} {...register("guide name")} placeholder="Guide Name"/>
+          <input defaultValue={details?.location} {...register("location")} placeholder="Location"/>
+          <input defaultValue={details?.languages} {...register("languages")} placeholder="Languages"/>
           
           
           <input type="submit" value="Booking Now" />

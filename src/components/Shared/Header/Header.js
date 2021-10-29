@@ -34,8 +34,7 @@ const Header = () => {
               :
               <Link to="/login">
                   <Button className="me-2" variant="primary">Login</Button>
-              </Link>}
-                <Link to="/booking">Booking</Link>
+              </Link>} 
               </Nav>
             </Navbar.Collapse>
           </Container>

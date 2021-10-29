@@ -15,15 +15,16 @@ const useFirebase = () => {
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, provider)
         
-        .catch(error => {
-            setError(error.message);
-        })
+        
     }
 
     const logOut = () => {
         signOut(auth)
         .then(() => {
             setUser({})
+        })
+        .catch(error => {
+            setError(error.message)
         })
     }
 
@@ -37,6 +38,7 @@ const useFirebase = () => {
     return {
         user,
         error,
+        setError,
         signInUsingGoogle,
         logOut
     }
