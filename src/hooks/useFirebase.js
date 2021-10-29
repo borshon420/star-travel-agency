@@ -8,6 +8,7 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setUser] = useState([]);
     const [error, setError] = useState('');
+    
 
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
@@ -29,11 +30,14 @@ const useFirebase = () => {
     }
 
     useEffect(()=>{
-        onAuthStateChanged(auth, user => {
+        
+        const unsubscribed = onAuthStateChanged(auth, user => {
             if(user){
                 setUser(user);
             }
+            
         })
+        return () => unsubscribed;
     }, [])
     return {
         user,

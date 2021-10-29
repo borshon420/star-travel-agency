@@ -9,8 +9,8 @@ import "./Booking.css";
 
 const Booking = () => {
   const { user } = useAuth();
-  const [details, setDetails] = useState({})
-  const { register, handleSubmit } = useForm();
+  const [details, setDetails] = useState({});
+  const { register, handleSubmit} = useForm();
   const {id} = useParams();
   
   useEffect(()=>{
@@ -18,24 +18,31 @@ const Booking = () => {
     .then(res => res.json())
     .then(data => setDetails(data))
   },[])
-  const onSubmit = (data) => {
-    // fetch('http://localhost:5000/orders', {
-    //   method: 'POST',
-    //   headers: {
-    //     'content-type' : 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // })
-    // .then(res => res.json())
-    //   .then(result => {
-    //       if(result.insertedId){
-    //           alert('order proceed succfully');
-    //           reset();
-    //       }
-    //   })
 
+
+  
+
+  const onSubmit = (data) => {
+    fetch(`http://localhost:5000/orders`, {
+      method: 'POST',
+      headers: {
+        'content-type' : 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+      .then(result => {
+          if(result.insertedId){
+              alert('Booking proceed succfully');
+              
+          }
+      })
     console.log(data);
   };
+
+
+  
+
   return (
     <div>
         
@@ -52,18 +59,17 @@ const Booking = () => {
             {...register("email")}
             placeholder="Username or Email"
           />
-          <input type="number" {...register("date")} placeholder="Date" />
+          {/* <input type="text" {...register("address")} placeholder="address" required/> */}
           
-          <input defaultValue={details?.name} {...register("guide name")} placeholder="Guide Name"/>
-          <input defaultValue={details?.location} {...register("location")} placeholder="Location"/>
-          <input defaultValue={details?.languages} {...register("languages")} placeholder="Languages"/>
-          
-          
-          <input type="submit" value="Booking Now" />
+          <input type="text" defaultValue={details.name} {...register("guide")} placeholder="Guide Name"/>
+          <input type="text" defaultValue={details.location} {...register("location")} placeholder="Location"/>
+          <input type="text" defaultValue={details.languages} {...register("languages")} placeholder="Languages"/>
+          <input type="submit" defaultValue="Booking Now" />
         </form>
       </div>
     </div>
   );
 };
+
 
 export default Booking;
