@@ -1,0 +1,41 @@
+.booking-form {
+    background-color: black;
+    height: 600px;
+}
+
+.booking-form form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.booking-form input, textarea {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+ /* Make Responsive */
+ @media only screen and (max-width: 688px) {
+    .booking-form {
+        background-color: black;
+        height: 500px;
+    }
+    .booking-form input, textarea {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 689px) and (max-width: 991px) {
+    .booking-form {
+        background-color: black;
+        height: 500px;
+    }
+
+    .booking-form input, textarea {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+  }
