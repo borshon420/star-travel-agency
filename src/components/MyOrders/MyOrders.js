@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import Orders from '../Orders/Orders';
 
 const MyOrders = () => {
@@ -11,6 +12,7 @@ const MyOrders = () => {
     return (
         <div style={{marginBottom: '400px'}} className="mt-5">
             <h1 className="mb-5">My All Orders: {orders.length}</h1>
+            <Container>
             <div className="services-container mb-5">
                 {
                     orders.map(order => <Orders 
@@ -19,6 +21,7 @@ const MyOrders = () => {
                     ></Orders>)
                 }
             </div>
+            </Container>
         </div>
     );
 };
