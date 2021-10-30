@@ -9,7 +9,9 @@ import Login from './components/Login/Login';
 import AuthProvider from './context/AuthProvider';
 import Booking from './components/Booking/Booking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import Service from './components/Service/Service';
+import Destination from './components/Destination/Destination';
+import Promitions from './components/Promotions/Promitions';
+
 
 function App() {
   return (
@@ -24,8 +26,11 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/login">
-            <Login></Login>
+          <Route path="/destination">
+            <Destination></Destination>
+          </Route>
+          <Route path="/promotion">
+            <Promitions></Promitions>
           </Route>
           <PrivateRoute path="/booking/:id">
             <Booking></Booking>
@@ -33,6 +38,9 @@ function App() {
           <PrivateRoute path="/booking">
             <Booking></Booking>
           </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

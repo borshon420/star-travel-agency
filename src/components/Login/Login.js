@@ -8,16 +8,15 @@ import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const {signInUsingGoogle, setError} = useAuth();
-    const history = useHistory();
     const location = useLocation();
-
-    const redirect_uri = location.state?.form || '/';
+    const history = useHistory();
     
+    const redirect_uri = location.state?.form || '/';
+    console.log(redirect_uri)
     const handleGoogleLogin = () => {
-        signInUsingGoogle().then((result)=> {
-            history.push(redirect_uri)
-            
-            
+        signInUsingGoogle()
+        .then((result)=> {
+            history.push(redirect_uri)  
         })
         .catch(error => {
             setError(error.message);

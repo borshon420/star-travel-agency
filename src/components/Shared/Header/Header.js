@@ -22,6 +22,8 @@ const Header = () => {
             >
               <Nav className="nav-link">
                 <Link to="/home">Home</Link>
+                <Link to="/destination">Destination</Link>
+                <Link to="/promotion">Promotions</Link>
                 {/* login */}
                 {user.email && (
                   <span style={{ color: "white", marginRight: "10px" }}>

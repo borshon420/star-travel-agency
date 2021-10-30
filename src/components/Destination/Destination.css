@@ -1,0 +1,40 @@
+.destination-heading {
+    height: 300px;
+    background-color: black;
+}
+
+.destination-heading h1 {
+    color: white;
+    padding-top: 80px;
+}
+
+.destination-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.destination-card {
+    margin-bottom: 20px;
+}
+
+ /* Make Responsive */
+ @media only screen and (max-width: 688px) {
+    .destination-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .destination-text h1{
+        font-size: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 689px) and (max-width: 991px) {
+    .destination-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+  }

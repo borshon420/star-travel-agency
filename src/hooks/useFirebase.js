@@ -31,13 +31,12 @@ const useFirebase = () => {
 
     useEffect(()=>{
         
-        const unsubscribed = onAuthStateChanged(auth, user => {
+        onAuthStateChanged(auth, user => {
             if(user){
                 setUser(user);
             }
             
         })
-        return () => unsubscribed;
     }, [])
     return {
         user,

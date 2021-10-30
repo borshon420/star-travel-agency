@@ -6,7 +6,7 @@ import './Service.css';
 const Service = ({ service }) => {
   const { name, img, description, location, languages, _id } = service;
   return (
-    <div className="card-content">
+    <div className="card-content mb-5">
       <Container>
         
         <Card>
@@ -18,7 +18,7 @@ const Service = ({ service }) => {
             <Card.Text>
               {description.slice(0, 100)}
             </Card.Text>
-            <Link to={`/booking/${_id}`}><Button variant="dark">Go somewhere</Button></Link>
+            <Link to={`/booking/${_id}`}><Button variant="dark">Book Now</Button></Link>
           </Card.Body>
         </Card>
         
