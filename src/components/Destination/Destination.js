@@ -24,7 +24,7 @@ const Destination = () => {
         <div className="destination-content mb-5">
           <div className="destination-card">
           <Card>
-            <Card.Img variant="top" style={{height: '196px'}} src={img1} />
+            <Card.Img variant="top" style={{height: '230px'}} src={img1} />
             <Card.Body>
               <Card.Title> Lisbon</Card.Title>
               <Card.Text>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory, useLocation} from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import './Login.css';
+import icon from '../../images/icon/icon.png';
 
 
 const Login = () => {
@@ -27,9 +27,13 @@ const Login = () => {
     
 
     return (
-        <div style={{marginBottom: '400px'}}>
-            <h1>Please Login with your Google Account</h1>
-            <Button onClick={handleGoogleLogin} variant="warning">Continue with Google</Button>
+        <div className="login-container">
+            <div className="login-card">
+            <h3>Login with</h3>
+            <div className="login-button">
+            <button onClick={handleGoogleLogin} variant="warning"><img src={icon} alt="" />Continue with Google</button>
+            </div>
+            </div>
         </div>
     );
 };

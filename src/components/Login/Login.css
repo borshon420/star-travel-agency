@@ -1,0 +1,71 @@
+.login-container {
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.login-card {
+    margin: auto;
+    width: 40%;
+    border: 1px solid gray;
+    padding: 100px;
+    
+}
+
+.login-card h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+.login-button img{
+    height: 20px;
+    margin-right: 10px;
+}
+
+.login-button button {
+    background-color: white;
+    border: none;
+    border: 1px solid gray;
+    padding: 10px 40px;
+    border-radius: 100px;
+}
+
+  /* Make Responsive */
+  @media only screen and (max-width: 688px) {
+    .login-container {
+        background-color: black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .login-card {
+        margin: auto;
+        width: 100%;
+        border: 1px solid gray;
+        padding: 100px;
+        
+    }
+    .login-button button {
+        background-color: white;
+        border: none;
+        border: 1px solid gray;
+        padding: 10px 10px;
+        border-radius: 100px;
+    }
+
+  }
+  
+  @media only screen and (min-width: 689px) and (max-width: 991px) {
+    .login-container {
+        background-color: black;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .login-card {
+        margin: auto;
+        width: 80%;
+        border: 1px solid gray;
+        padding: 100px;
+        
+    }
+  }

@@ -29,7 +29,7 @@ const Home = () => {
       <div className="destination-content mb-5"> 
       <div className="destination-card">
           <Card>
-            <Card.Img variant="top" style={{height: '196px'}} src={img1} />
+            <Card.Img variant="top" style={{height: '230px'}} src={img1} />
             <Card.Body>
               <Card.Title> Lisbon</Card.Title>
               <Card.Text>
@@ -83,10 +83,10 @@ const Home = () => {
             <Card.Body>
               <Card.Title> Fee Motor boat for 1 day.</Card.Title>
               <Card.Text>
-              motorboat has one or more engines that propel the vessel over the top of the water. Boat engines vary in shape, size, and type. 
+              motorboat has one or more engines that propel the vessel over the top of the water. Boat engines vary in  
               </Card.Text>
               <Link to="/promotion">
-              <Button variant="dark">Book Now</Button>
+              <Button variant="dark">Get Promotion</Button>
               </Link>
             </Card.Body>
           </Card>
@@ -97,10 +97,10 @@ const Home = () => {
             <Card.Body>
               <Card.Title> Free Dinner for 2 persons.</Card.Title>
               <Card.Text>
-              Most modern cushioned mattress on a bed frame, the mattress resting either on a solid base, often wood slats, or a sprung base
+              Most modern cushioned mattress on a bed frame, the mattress resting either on a solid base, often 
               </Card.Text>
               <Link to="/promotion">
-              <Button variant="dark">Book Now</Button>
+              <Button variant="dark">Get Promotion</Button>
               </Link>
             </Card.Body>
           </Card>
@@ -114,7 +114,7 @@ const Home = () => {
               scooter in the 1960s with the name "kangaroo scooter", kangaroo scooters were built in Taiwan
               </Card.Text>
               <Link to="/promotion">
-              <Button variant="dark">Book Now</Button>
+              <Button variant="dark">Get Promotion</Button>
               </Link>
             </Card.Body>
           </Card>

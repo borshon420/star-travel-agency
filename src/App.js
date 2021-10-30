@@ -11,6 +11,8 @@ import Booking from './components/Booking/Booking';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Destination from './components/Destination/Destination';
 import Promitions from './components/Promotions/Promitions';
+import MyOrders from './components/MyOrders/MyOrders';
+import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
 
 
 function App() {
@@ -31,6 +33,12 @@ function App() {
           </Route>
           <Route path="/promotion">
             <Promitions></Promitions>
+          </Route>
+          <Route path="/myorder">
+            <MyOrders></MyOrders>
+          </Route>
+          <Route path="/manageorder">
+            <ManageAllOrder></ManageAllOrder>
           </Route>
           <PrivateRoute path="/booking/:id">
             <Booking></Booking>

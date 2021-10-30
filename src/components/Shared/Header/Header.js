@@ -24,6 +24,8 @@ const Header = () => {
                 <Link to="/home">Home</Link>
                 <Link to="/destination">Destination</Link>
                 <Link to="/promotion">Promotions</Link>
+                {user.email && (<Link to="/myorder">My Orders</Link>)}
+                {/* <Link to="/manageorder">Manage All Orders</Link> */}
                 {/* login */}
                 {user.email && (
                   <span style={{ color: "white", marginRight: "10px" }}>
@@ -32,10 +34,10 @@ const Header = () => {
                   </span>
                 )}
                 {user.email ? 
-              <Button onClick={logOut} className="me-2" variant="primary">log Out</Button>
+              <Button onClick={logOut} className="me-2" variant="light">log Out</Button>
               :
               <Link to="/login">
-                  <Button className="me-2" variant="primary">Login</Button>
+                  <Button className="me-2" variant="light">Login</Button>
               </Link>} 
               </Nav>
             </Navbar.Collapse>
