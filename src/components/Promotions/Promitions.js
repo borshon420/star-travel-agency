@@ -6,6 +6,7 @@ import imgg2 from '../../images/promotion/2.jpg';
 import imgg3 from '../../images/promotion/3.jpg';
 
 const Promitions = () => {
+    
   return (
     <div>
       <div className="destination-heading">

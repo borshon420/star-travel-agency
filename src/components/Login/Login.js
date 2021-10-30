@@ -9,10 +9,11 @@ import useAuth from '../../hooks/useAuth';
 const Login = () => {
     const {signInUsingGoogle, setError} = useAuth();
     const location = useLocation();
+    console.log(location)
     const history = useHistory();
     
-    const redirect_uri = location.state?.form || '/';
-    console.log(redirect_uri)
+    const redirect_uri = location.state?.from || '/';
+    
     const handleGoogleLogin = () => {
         signInUsingGoogle()
         .then((result)=> {
