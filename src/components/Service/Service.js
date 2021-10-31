@@ -7,7 +7,7 @@ const Service = ({ service }) => {
   const { name, img, description, location, languages, _id } = service;
   return (
     <div className="card-content mb-5">
-      <Container>
+      
         
         <Card>
           <Card.Img variant="top" src={img} />
@@ -22,7 +22,7 @@ const Service = ({ service }) => {
           </Card.Body>
         </Card>
         
-      </Container>
+      
     </div>
   );
 };

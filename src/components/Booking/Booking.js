@@ -49,7 +49,7 @@ const Booking = () => {
     <div className="guide-info">
       <div className="guide-details">
         <Container>
-          <Card className="card">
+          <Card className="booking-card">
             <Card.Body>
               <Card.Img variant="top" src={details.img} />
               <Card.Title>
