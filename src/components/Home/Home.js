@@ -43,7 +43,7 @@ const Home = () => {
           </div>
           <div className="destination-card">
           <Card>
-            <Card.Img variant="top" src={img2} />
+            <Card.Img variant="top" style={{height: '230px'}} src={img2} />
             <Card.Body>
               <Card.Title> Moscow</Card.Title>
               <Card.Text>
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
           <div className="destination-card">
           <Card>
-            <Card.Img variant="top" src={img3} />
+            <Card.Img variant="top" style={{height: '230px'}} src={img3} />
             <Card.Body>
               <Card.Title> Barcelona</Card.Title>
               <Card.Text>

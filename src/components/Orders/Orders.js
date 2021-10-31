@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 
 const Orders = ({order}) => {
-    const {name, email, guide, location, languages, _id} = order;
+    
+    const {name, img, email, address, phone, languages, _id} = order;
+    console.log(order)
+    
 
     const handleDeleteOrder = id => {
         fetch(`https://nameless-brook-91912.herokuapp.com/orders/${id}`, {
@@ -22,15 +25,15 @@ const Orders = ({order}) => {
         <div>
             <div className="card-content mb-5">
       <Container>
-        
         <Card>
-          
           <Card.Body>
-            <Card.Title>Order name: {name}</Card.Title>
-            <Card.Title>Order email: {email}</Card.Title>
-            <Card.Title><small>Guide Name: {guide}</small></Card.Title>
-            <Card.Title><small>Location: {location}</small></Card.Title>
-            <Card.Title><small>languages: {languages}</small></Card.Title>
+            <Card.Img variant="top" src={img} />
+            <h2>Ordered by</h2>
+            <Card.Title>name: {name}</Card.Title>
+            <Card.Title>email: {email}</Card.Title>
+            <Card.Title><small>Address: {address}</small></Card.Title>
+            <Card.Title><small>Phone: {phone}</small></Card.Title>
+            <Card.Title><small>Languages: {languages}</small></Card.Title>
             <Button onClick={()=> handleDeleteOrder(_id)} variant="dark">Delete</Button>
           </Card.Body>
         </Card>

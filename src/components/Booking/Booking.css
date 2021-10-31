@@ -1,20 +1,39 @@
+.guide-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .booking-form {
     background-color: black;
-    height: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .booking-form form{
     
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;   
+    
 }
 
 .booking-form input, textarea {
-    width: 30%;
+    width: 40%;
     margin-bottom: 10px;
 }
+
+.guide-details {
+    margin: auto;
+    background-color: black;
+}
+
+.card{
+    width: 28rem;
+}
+
+
 
  /* Make Responsive */
  @media only screen and (max-width: 688px) {
@@ -23,8 +42,16 @@
         height: 500px;
     }
     .booking-form input, textarea {
-        width: 50%;
+        width: 100%;
         margin-bottom: 10px;
+    }
+    .guide-info {
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .card{
+        width: 100%;
+        margin-bottom: 20px;
     }
   }
   
@@ -35,7 +62,11 @@
     }
 
     .booking-form input, textarea {
-        width: 50%;
+        width: 90%;
         margin-bottom: 10px;
+    }
+    .card{
+        width: 80%;
+        margin-bottom: 20px;
     }
   }
