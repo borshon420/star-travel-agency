@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Card, Container } from 'react-bootstrap';
 
 const Orders = ({order}) => {
@@ -6,7 +6,7 @@ const Orders = ({order}) => {
     const {name, img, email, address, phone, languages, _id} = order;
     console.log(order)
     
-
+    
     const handleDeleteOrder = id => {
         fetch(`https://nameless-brook-91912.herokuapp.com/orders/${id}`, {
             method: 'DELETE',

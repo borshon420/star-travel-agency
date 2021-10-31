@@ -4,11 +4,11 @@ import { useHistory, useLocation} from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 import icon from '../../images/icon/icon.png';
+import useFirebase from '../../hooks/useFirebase';
 
 
 const Login = () => {
-    const {signInUsingGoogle, setError} = useAuth();
-    const [isLoading, setIsLoading] = useState(true);
+    const {signInUsingGoogle, setError, setIsLoading} = useAuth();
     const location = useLocation();
     console.log(location)
     const history = useHistory();
@@ -21,16 +21,11 @@ const Login = () => {
         .then((result)=> {
             history.push(redirect_uri)  
         })
-        .catch(error => {
-            setError(error.message);
-        })
-        .finally(()=>{
-            setIsLoading(false);
-        })
+        .finally(()=> setIsLoading(false));
         
     }
     
-    if (isLoading){<Spinner animation="border" />}
+    
     return (
         <div className="login-container">
             <div className="login-card">

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Card, Container, Spinner } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import useAuth from "../../hooks/useAuth";
@@ -10,7 +10,7 @@ import "./Booking.css";
 
 const Booking = () => {
   
-  const { user, isLoading } = useAuth();
+  const { user } = useAuth();
   const [details, setDetails] = useState({});
   console.log(details);
   const { register, handleSubmit } = useForm();
@@ -44,7 +44,7 @@ const Booking = () => {
   };
   
   
-  if (isLoading){ return <Spinner animation="border" />}
+  
   return (
     <div className="guide-info">
       <div className="guide-details">
