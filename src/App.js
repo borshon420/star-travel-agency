@@ -33,9 +33,9 @@ function App() {
             <Route path="/promotion">
               <Promitions></Promitions>
             </Route>
-            <Route path="/myorder">
+            <PrivateRoute path="/myorder">
               <MyOrders></MyOrders>
-            </Route>
+            </PrivateRoute>
             <Route path="/manageorder">
               <ManageAllOrder></ManageAllOrder>
             </Route>
