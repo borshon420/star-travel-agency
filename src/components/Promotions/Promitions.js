@@ -1,11 +1,16 @@
 import React from "react";
-import { Button, Card, Container } from "react-bootstrap";
+import { Button, Card, Container, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import imgg1 from '../../images/promotion/1.jpg';
 import imgg2 from '../../images/promotion/2.jpg';
 import imgg3 from '../../images/promotion/3.jpg';
 
 const Promitions = () => {
+  const {isLoading} = useAuth();
+  if (isLoading){
+    return <Spinner className="mt-5" animation="border" />
+  }
     
   return (
     <div>

@@ -1,19 +1,19 @@
-import React from 'react';
-import './Footer.css';
-import footerLogo from '../../../images/logo/logo.png';
-import { Container } from 'react-bootstrap';
+import React from "react";
+import "./Footer.css";
+import footerLogo from "../../../images/logo/logo.png";
+import { Container } from "react-bootstrap";
 const Footer = () => {
-    return (
-        <div>
-            <div className="footer-container">
+  return (
+    <div>
+      <div className="footer-container">
         <Container className="footer-container-2">
           <div>
             <img style={{ height: "100px" }} src={footerLogo} alt="" />
           </div>
           <div>
             <div className="mb-3 me-2">
-            <h5>Excursions</h5>
-            <hr />
+              <h5>Excursions</h5>
+              <hr />
             </div>
             <p>Prague</p>
             <p>Lisbon</p>
@@ -22,9 +22,9 @@ const Footer = () => {
             <p>Milan</p>
           </div>
           <div>
-          <div className="mb-3 me-2">
-            <h5>Popular Tours</h5>
-            <hr />
+            <div className="mb-3 me-2">
+              <h5>Popular Tours</h5>
+              <hr />
             </div>
             <p>KraKaw</p>
             <p>Malaga</p>
@@ -33,9 +33,9 @@ const Footer = () => {
             <p>Florence</p>
           </div>
           <div>
-          <div className="mb-3 me-2">
-            <h5>Exclusive Tours</h5>
-            <hr />
+            <div className="mb-3 me-2">
+              <h5>Exclusive Tours</h5>
+              <hr />
             </div>
             <p>Amsterdam</p>
             <p>Madrid</p>
@@ -45,8 +45,8 @@ const Footer = () => {
           </div>
         </Container>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Footer;

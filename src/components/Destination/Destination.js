@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Container } from "react-bootstrap";
+import { Button, Card, Container, Spinner } from "react-bootstrap";
 import "./Destination.css";
 import img1 from '../../images/destination/1.jpg';
 import img2 from '../../images/destination/2.jpg';
@@ -8,8 +8,13 @@ import img4 from '../../images/destination/4.jpg';
 import img5 from '../../images/destination/5.jpg';
 import img6 from '../../images/destination/6.jpg';
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Destination = () => {
+  const {isLoading} = useAuth();
+  if (isLoading){
+    return <Spinner className="mt-5" animation="border" />
+  }
   return (
     <div>
       <div className="destination">

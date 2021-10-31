@@ -9,13 +9,12 @@ import bookingLogo from "../../images/logo/logo.png";
 import "./Booking.css";
 
 const Booking = () => {
-  
   const { user } = useAuth();
   const [details, setDetails] = useState({});
   console.log(details);
   const { register, handleSubmit } = useForm();
   const { id } = useParams();
-  
+
   useEffect(() => {
     fetch(`https://nameless-brook-91912.herokuapp.com/services/${id}`)
       .then((res) => res.json())
@@ -23,7 +22,6 @@ const Booking = () => {
   }, []);
 
   const onSubmit = (data) => {
-    
     data.img = details.img;
     fetch(`https://nameless-brook-91912.herokuapp.com/orders`, {
       method: "POST",
@@ -37,14 +35,11 @@ const Booking = () => {
         if (result.insertedId) {
           alert("Booking proceed succfully");
         }
-        
       });
-      
+
     console.log(data);
   };
-  
-  
-  
+
   return (
     <div className="guide-info">
       <div className="guide-details">

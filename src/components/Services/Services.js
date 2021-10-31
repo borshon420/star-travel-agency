@@ -6,19 +6,18 @@ import "./Services.css";
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  const {isLoading} = useAuth();
-  
+  const { isLoading } = useAuth();
+
   useEffect(() => {
     fetch("https://nameless-brook-91912.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-  if (isLoading){
-    return <Spinner className="mt-5" animation="border" />
+  if (isLoading) {
+    return <Spinner className="mt-5" animation="border" />;
   }
   return (
     <div>
-      
       <div className="classes-text my-5">
         <h1 className="mt-3">OUR SERVICES</h1>
         <h5>Of Professional Guide</h5>
